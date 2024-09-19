@@ -7,20 +7,36 @@
 		<title>Return first and last name from a form</title>
 		<style type="text/css">
 			body {margin: 30px;}
+
+			.btn{
+				background-color : skyblue;
+				border : 1px solid lightblue;
+				outline : none;
+			}
 		</style> 
 	<link rel="stylesheet" href="styles.css">
 </head>
 
 <body>
-	<form id="form1" onsubmit="getFormvalue()">
+	<form id="form1" onsubmit="getFormValue()">
 		First name: <input type="text" name="fname" class="fname"><br>
 		Last name: <input type="text" name="lname" class="lname"><br>
 		<input type="submit" value="Submit" class="btn">
 	</form>
 	
-    <script type="text/javascript" src="./script.js">
-</script>
+    <script>
 
+        let fname = document.querySelector(".fname")
+        let lname = document.querySelector(".lname")
+
+        function getFormvalue(e) {
+	        e.preventDefault()
+	        let name1 = fname.value
+	        let name2 = lname.value
+
+	       alert(name1 + " " + name2) }
+           
+    </script>
 </body>
 
 </html>
